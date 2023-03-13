@@ -1,3 +1,93 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes scroll {
+    0% {
+      transform: translateX(0);
+      border: 1px solid red;
+    }
+    100% {
+        border: 1px solid red;
+      transform: translateX(calc(-250px * 7));
+    }
+  }
+  
+.slider {
+    background: transparent;
+    /* box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125); */
+    height: 100px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid red;
+  }
+  
+  .slider::before,
+  .slider::after {
+    /* background: transparent; */
+    /* background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ); */
+    content: "";
+    height: 100px;
+    position: absolute;
+    width: 250px;
+    z-index: 2;
+  }
+  
+  .slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+  }
+  
+  .slider::before {
+    left: 0;
+    top: 0;
+  }
+  
+  .slide-track {
+    border: 1px solid red;
+    animation: scroll 10s linear infinite;
+    display: flex;
+    width: calc(250px * 14);
+  }
+  
+  .slide {
+    border: 1px solid red;
+    height: 100px;
+    width: 250px;
+  }
+  
+  /* ------------------------------------------------------------------ */
+
+
+  .parallax {
+    overflow: hidden;
+    letter-spacing: -2px;
+    line-height: 0.8;
+    margin: 0;
+    white-space: nowrap;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  
+  .parallax .scroller {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 64px;
+    display: flex;
+    white-space: nowrap;
+    display: flex;
+    flex-wrap: nowrap;
+    border: 1px solid red;
+  }
+  
+  .parallax span {
+    display: block;
+    margin-right: 30px;
+  }
+  
