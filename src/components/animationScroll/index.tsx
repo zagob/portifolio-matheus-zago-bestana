@@ -19,7 +19,7 @@ interface AnimationScrollProps {
 
 export function AnimationScroll({ repeatItens = 3 }: AnimationScrollProps) {
   return (
-    <div style={{ marginTop: 80 }} className={`${styles["home-hero-logos"]}`}>
+    <div style={{ marginTop: 80 }} className={styles["home-hero-logos"]}>
       <div className="text-lg font-medium mr-10">Skills</div>
       <div className={styles["home-hero-carousel-wrap"]}>
         {Array.from({ length: repeatItens }).map(() => (
