@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div style={inter.style} className="h-screen">
       <Header />
-      <main className="px-2 text-7xl h-screen lg:text-8xl mx-auto flex flex-col gap-10 items-center justify-center">
+      <main className="px-2 text-5xl sm:text-6xl md:text-7xl h-screen lg:text-8xl mx-auto flex flex-col gap-10 items-center justify-center">
         <div className="mt-0 text-transparent lg:mt-20">
           <h1 className="bg-clip-text bg-gradient-to-r from-indigo-900 via-indigo-700 to-blue-700">
             Development
